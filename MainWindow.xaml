@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="Deep_Rock_Galactic_Save_File_Manager.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Deep_Rock_Galactic_Save_File_Manager"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+     
+    <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="center">
+        <TextBlock FontWeight="Bold" FontSize="24" VerticalAlignment="Top" HorizontalAlignment="Center">Deep Rock Galactic Save File Sync</TextBlock>
+        <!-- Steam File Select-->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="16">
+            <Button x:Name="steamSaveFilePicker" Click="steamSaveFilePicker_Click" Margin="16">Open Steam Save File</Button>
+            <TextBlock x:Name="steamSaveFile_SelectedFileName" Margin="2" HorizontalAlignment="Center">No File Selected.</TextBlock>
+        </StackPanel>
+        <!-- Windows File Select -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="16">
+            <Button x:Name="windowsSaveFilePicker" Click="windowsSaveFilePicker_Click" Margin="16">Open Windows Save File</Button>
+            <TextBlock x:Name="windowsSaveFile_SelectedFileName" Margin="2" HorizontalAlignment="Center">No File Selected.</TextBlock>
+        </StackPanel>
+        <!-- Compare -->
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="16">
+            <TextBlock x:Name="steamDateText" Margin="4"></TextBlock>
+            <TextBlock x:Name="windowsDateText" Margin="4"></TextBlock>
+            <TextBlock x:Name="compareFileText" Margin="16"></TextBlock>
+            <Button x:Name="syncBtn" Click="syncBtn_Click" IsEnabled="False" Margin="16" HorizontalAlignment="Stretch">Sync</Button>
+        </StackPanel>
+        <!-- File Location Hints -->
+        <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <TextBlock>Steam: C:\Program Files (x86)\Steam)\steamapps\common\Deep Rock Galactic\FSD\Saved\SaveGames > [numbers]_Player.sav</TextBlock>
+            <TextBlock>Windows: C:\Users\(Your username here)\AppData\Local\Packages > CoffeeStainStudios.DeepRockGalactic_[characters] > SystemAppData > wgs > [dir characters] > [file characters]</TextBlock>
+        </StackPanel>
+    </StackPanel>
+</Window>

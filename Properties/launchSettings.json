@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Deep Rock Galactic Save File Manager (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "Deep Rock Galactic Save File Manager (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
